@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Position for floating effect */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative; /* Allow positioning of the underline */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: color 0.3s;
+    position: relative; /* Required for the pseudo-element */
+}
+
+nav ul li a:hover {
+    color: #e67e22; /* Change color on hover */
+}
+
+/* Underline effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Position it below the text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background: #e67e22; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease; /* Animation for underline */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.hero-text h2 {
+    font-size: 4rem; /* Larger font for hero text */
+    margin-bottom: 20px; /* Space below heading */
+
+
+}
+.hero-text {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+    padding: 62px;
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+}
+
+
+
+
+
+.cta-btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #f90, #e67e22);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(90deg, #e68a00, #f90);
+    transform: scale(1.05);
+}
+
+.programs-section {
+    padding: 50px 20px;
+    background: #f9f9f9; /* Light gray background */
+    text-align: center;
+}
+
+.programs-section h2 {
+    margin-bottom: 40px; /* Space below heading */
+}
+
+.program-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between programs */
+}
+
+.program {
+    background: #fff; /* White background for programs */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    width: 300px; /* Fixed width for programs */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.details-btn {
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #f90, #e67e22);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px; /* Space above button */
+}
+
+.details-btn:hover {
+    background: linear-gradient(90deg, #e68a00, #f90);
+    transform: scale(1.05);
+}
+
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff; /* White background */
+}
+
+.about-section img {
+     /* Responsive width */
+    height: 185px; /* Maintain aspect ratio */
+    /* max-height: 400px; Optional: limit maximum height */
+    margin-top: 20px; /* Space above the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form elements */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid #e67e22; /* Highlight border on focus */
+}
+
+textarea {
+    height: 100px; /* Fixed height for textarea */
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #f90, #e67e22);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #e68a00, #f90);
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-links {
+    margin-top: 10px; /* Space above social links */
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px; /* Space between social icons */
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #e67e22; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Color of the scrollbar track */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
