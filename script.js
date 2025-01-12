@@ -23,3 +23,12 @@ window.onscroll = function() {
         header.classList.remove("sticky");
     }
 };
+if (window.innerWidth < 768) {  // For mobile devices with width less than 768px
+    const meta = document.querySelector('meta[name="viewport"]');
+    meta.parentNode.removeChild(meta);
+
+    const newMeta = document.createElement('meta');
+    newMeta.name = "viewport";
+    newMeta.content = "width=1024, initial-scale=1.0, user-scalable=no";
+    document.head.appendChild(newMeta);
+}
